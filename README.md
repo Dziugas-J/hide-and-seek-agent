@@ -1,6 +1,6 @@
 # stealth-npc-mcdm-unity
 
-This is a Unity 3D project where an NPC intelligently selects hiding spots using the **Weighted Sum Model (WSM)** — a multi-criteria decision-making method. The player must find the NPC before it escapes or remains hidden.
+Unity 3D project where an NPC intelligently selects hiding spots using the **Weighted Sum Model (WSM)** - a multi-criteria decision-making method. The player must find the NPC before it escapes or remains hidden.
 
 ---
 
