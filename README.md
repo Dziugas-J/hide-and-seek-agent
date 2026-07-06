@@ -1,24 +1,60 @@
-# stealth-npc-mcdm-unity
+# Hide-And-Seek Game Agent
 
-Unity 3D project where an NPC intelligently selects hiding spots using the **Weighted Sum Model (WSM)** - a multi-criteria decision-making method. The player must find the NPC before it escapes or remains hidden.
+Hide-And-Seek Game Agent is a Unity 3D project where an NPC uses a Multi-Criteria Decision-Making method to intelligently select hiding spots. The agent evaluates possible hiding locations, chooses the safest option, and moves through the environment while trying to avoid detection by the player.
 
----
+## Demo
 
-## Project Summary
+# Gameplay Demo
 
-- **A\* Pathfinding**: NPCs use a 2D grid-based A\* algorithm for movement.
-- **Multi-Criteria Hiding Spot Selection**: NPC evaluate spots based on:
-  - Distance from player
-  - Safety score (dynamic based on visibility and proximity)
-  - Escape route availability
-- **Hiding spot iteration**: When the player comes within **20 grid tiles** of the NPC, the NPC dynamically re-evaluates all hiding spots using WSM logic and may switch to a safer location.
-- **Game over**: The game ends when the player sees the NPC using a real-time Raycast visibility check.
+[![Watch the video](https://img.youtube.com/vi/VH9ivYNfitc/0.jpg)](https://youtu.be/VH9ivYNfitc)
 
----
+## Tech Stack
+
+- Unity
+- C#
+
+### Decision Making
+
+- A* Pathfinding
+- Weighted Sum Model
+- Multi-Criteria Decision Making
+- Raycast-based visibility detection
+
+### Environment
+
+- 3D Unity scene
+- 2D grid-based navigation system
+- Dynamic hiding spot evaluation
+
+## Features
+
+- Intelligent NPC hiding behavior
+- Weighted Sum Model for hiding spot selection
+- A* pathfinding for NPC movement
+- Dynamic hiding spot re-evaluation
+- Player proximity detection
+- Real-time raycast visibility check
+- Safety score calculation based on player visibility and distance
+- Escape route availability evaluation
+- Game over condition when the NPC is spotted
+- Unity 3D environment with grid-based movement logic
 
 ## Requirements
-- [Unity Hub](https://unity.com/download)
-- Unity version: **2022.3.28f1 LTS**
+
+- Unity Hub
+- Unity 2022.3.28f1 LTS or newer
+
+## How It Works
+
+The NPC uses a grid-based A* algorithm to move through the environment. Available hiding spots are evaluated using multiple criteria:
+
+- Distance from the player
+- Safety score
+- Escape route availability
+
+Each criterion is weighted and combined using the Weighted Sum Model. The hiding spot with the highest final score is selected as the NPC's target.
+
+When the player comes within 20 grid tiles of the NPC, the agent re-runs the decision-making process and may switch to a safer hiding location.
 
 ## Gameplay demo
 [![Watch the video](https://img.youtube.com/vi/VH9ivYNfitc/0.jpg)](https://youtu.be/VH9ivYNfitc)
